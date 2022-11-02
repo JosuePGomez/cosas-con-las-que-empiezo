@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- ESTE ES MI PRIMER PROGRAMA -->
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>PROGRAMA DE PESO</title>
+</head>
+<body>
+    <h1>TU PESO EN PLANETAS</h1>
+    <p>¿SABÍAS QUE EN LA TIERRA PESAS DISTINTO QUE EN MARTE O EN JUPITER?</p>
+    <p>VAMOS A CONOCER TU PESO...</p>
+    
+    <script>
+    var planeta = prompt ("Si deseas saber tu peso \nElige 1 Marte o 2 Júpiter");
+    var usuario = prompt ("Cuál es tu peso?");
+    var peso = parseFloat (usuario);
+    var g_tierra = 9.8;
+    var g_marte = 3.7;
+    var g_jupiter = 24.8;
+    var peso_final;
+
+    if (planeta == 1){
+        peso_final = peso * g_marte / g_tierra;
+        peso_final = parseFloat(peso_final).toFixed(2);
+        document.write ("Tu peso en Marte sería <strong>"+ peso_final + " </strong> kilogramos."); 
+    }
+    else if (planeta == 2) {
+        peso_final = peso * g_jupiter / g_tierra;
+        peso_final = parseFloat(peso_final).toFixed(2);
+        document.write ("Tu peso en Júpiter es <strong>" + peso_final + "</strong> kilogramos.")
+    } else { document.write ("UUPS! Creo que te equivocaste \nvuelve a elegir el planeta CORRECTAMENTE") };    
+    </script>
+</body>
+</html>
